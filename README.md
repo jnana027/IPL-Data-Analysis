@@ -48,3 +48,20 @@ Develop a IPL Dashboard for season 2008 to 2022 to have details insights on belo
 >Matches won based on the result type.
 
 ![268be02061a78cdf9ae1b83fdeb0ae44](https://github.com/jnana027/IPL-Data-Analysis/assets/120124430/2818ae48-dc58-46d1-9a92-2e775538439c)
+
+Key Insights:
+
+>Used for KPI(Key Performance Indicator) to Finding the title winner,orange cap winner,purple cap winner,Number Tournment 6's and 4's in a season.
+
+>In IPL Batting used KPI And slicer to find out batsman Total runs,Boundaries for six and four and Batsman  Strike Rate.
+
+>In IPL Bowling used KPI And slicer to find out bowler Average,Wicket,Economy,Bowler Strike rate.
+
+>Teams that decide to bowl fast have a higher percentage of winning based on the toss decision."
+
+>In Eden Gardens cricket stadium, more matches have been held.
+
+>In total seasons, Mumbai Indians have won more matches compared to other teams
+
+>The team that takes more wickets tends to win based on the result type.
+
