@@ -1,0 +1,8 @@
+Key Insights:
+>Used for KPI(Key Performance Indicator) to Finding the title winner,orange cap winner,purple cap winner,Number Tournment 6's and 4's in a season.
+>In IPL Batting used KPI And slicer to find out batsman Total runs,Boundaries for six and four and Batsman  Strike Rate.
+>In IPL Bowling used KPI And slicer to find out bowler Average,Wicket,Economy,Bowler Strike rate.
+>Teams that decide to bowl fast have a higher percentage of winning based on the toss decision."
+>In Eden Gardens cricket stadium, more matches have been held.
+>In total seasons, Mumbai Indians have won more matches compared to other teams
+>The team that takes more wickets tends to win based on the result type.
