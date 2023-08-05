@@ -1,0 +1,46 @@
+>Calender Table = CALENDAR(MIN(ipl_matches_2008_2022[match_date]),MAX(ipl_matches_2008_2022[match_date]))
+
+>Year = YEAR('Calender Table'[Date])
+
+>Title Winner = 
+var max_date=CALCULATE(MAX('Calender Table'[Date]),ALLSELECTED(ipl_matches_2008_2022),VALUES(ipl_matches_2008_2022),VALUES(ipl_matches_2008_2022))
+var title_winner=CALCULATE(SELECTEDVALUE(ipl_matches_2008_2022[winning_team]),'Calender Table'[Date]=max_date)
+return title_winner
+
+>Batter runs = CONCATENATE(SUM(ipl_ball_by_ball_2008_2022[batsman_run])," Runs")
+
+>Bowler wicket = CONCATENATE(SUM(ipl_ball_by_ball_2008_2022[iswicket_delivery])," Wickets")
+
+
+In order to calculate batting strike rate, we must divide the total number of runs scored in an innings by the number of deliveries faced by a batsman.
+>Strike rate of batsman = (DIVIDE(SUM(ipl_ball_by_ball_2008_2022[batsman_run]),COUNT(ipl_ball_by_ball_2008_2022[ball_number]),0))*100
+
+
+
+
+The economy rate in cricket is calculated by dividing the number of runs conceded by a bowler by the number of overs bowled.
+Economy rate = Runs conceded/Overs bowled
+>Economy = DIVIDE
+(SUMX
+(FILTER(ipl_ball_by_ball_2008_2022,
+ipl_ball_by_ball_2008_2022[extra_type]<>"legbyes" && ipl_ball_by_ball_2008_2022[extra_type]<>"byes"),ipl_ball_by_ball_2008_2022[total_run]),
+(COUNT(ipl_ball_by_ball_2008_2022[overs]))/6
+)
+
+
+
+A cricketer's bowling average is calculated by dividing the numbers of runs they have conceded by the number of wickets they have taken.
+Average by Bowler = 
+DIVIDE
+(SUMX
+(FILTER(ipl_ball_by_ball_2008_2022,
+ipl_ball_by_ball_2008_2022[extra_type]<>"legbyes" && ipl_ball_by_ball_2008_2022[extra_type]<>"byes"),ipl_ball_by_ball_2008_2022[total_run]),
+SUM(ipl_ball_by_ball_2008_2022[iswicket_delivery])
+)
+
+
+
+
+A bowling strike rate is the average number of deliveries (balls) taken per dismissal or catch.
+For example, if a bowler takes 10 wickets in 100 overs, his strike rate will be 10. However, if he takes the same 10 wickets in 50 deliveries, his strike rate will be 5.
+>Bowling Strike rate = DIVIDE(COUNT(ipl_ball_by_ball_2008_2022[bowler]),SUM(ipl_ball_by_ball_2008_2022[iswicket_delivery]),0)
