@@ -46,3 +46,5 @@ Develop a IPL Dashboard for season 2008 to 2022 to have details insights on belo
 >Total wins by team in a season.
 
 >Matches won based on the result type.
+
+![268be02061a78cdf9ae1b83fdeb0ae44](https://github.com/jnana027/IPL-Data-Analysis/assets/120124430/2818ae48-dc58-46d1-9a92-2e775538439c)
