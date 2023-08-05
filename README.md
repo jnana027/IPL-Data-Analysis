@@ -34,9 +34,15 @@ IPL Analysis:
 2.Requirement:
 
 Develop a IPL Dashboard for season 2008 to 2022 to have details insights on below problem statements.
+
 >Find the title winner,orange cap winner,purple cap winner,Tournment 6's and 4's for the respective seasons on IPL.
+
 >Develop IPL Batting and Bowling status and add a filter where user can select bowler and batsman to see the status.
+
 >Winning percentage based on the toss decision.
+
 >Match win by venue.
+
 >Total wins by team in a season.
+
 >Matches won based on the result type.
